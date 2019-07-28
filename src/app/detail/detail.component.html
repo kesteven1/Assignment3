@@ -1,0 +1,25 @@
+<div class="grid-container">
+  <div class="item1" >
+    <nav class="navigation">
+      <ul>
+        <h3>Choose a song to see the information!</h3>
+        <button style="margin-right:4%;"*ngFor="let song of mySongs; let i = index" (click)='changeInfo(i)'>
+          {{song.sname}}
+        </button>
+      </ul>
+    </nav>
+  </div>
+  <div class="item2">
+    <ul style="list-style: none;">
+      <li><h3>Song Details:</h3></li>
+      <li>Song Name: {{songInfo.sname}}</li>
+      <li>Song Artist: {{songInfo.sartist}}</li>   
+      <li>Song Genre: {{songInfo.sgenre}}</li>
+      <li>Year Released: {{songInfo.syear}}</li>  
+    </ul>
+  </div>  
+  <div class="item3">
+    <br/>
+    <img id="songImage" src="{{songInfo.spicture}}">
+  </div>
+</div>
